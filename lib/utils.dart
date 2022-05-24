@@ -44,5 +44,6 @@ Image? ovalImageFile(Image? image) {
     throw const NoDecoderForImageFormatException();
   }
 
+  print('build oval image success !!!');
   return copyCropCircle(image);
 }
