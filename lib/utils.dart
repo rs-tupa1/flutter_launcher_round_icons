@@ -36,6 +36,7 @@ Image? decodeImageFile(String filePath) {
   if (image == null) {
     throw NoDecoderForImageFormatException(filePath);
   }
+  print('\nget image success !!!');
   return image;
 }
 
@@ -44,6 +45,6 @@ Image? ovalImageFile(Image? image) {
     throw const NoDecoderForImageFormatException();
   }
 
-  print('build oval image success !!!');
+  print('\nget oval image success !!!');
   return copyCropCircle(image);
 }
