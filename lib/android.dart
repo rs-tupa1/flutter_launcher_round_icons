@@ -34,7 +34,8 @@ void createDefaultIcons(
   printStatus('Creating default icons Android');
   final String filePath = getAndroidIconPath(flutterLauncherIconsConfig);
   final Image? image = decodeImageFile(filePath);
-  if (image == null) {
+  final Image? imageRound = ovalImageFile(image);
+  if (image == null || imageRound == null) {
     return;
   }
   final File androidManifestFile = File(constants.androidManifestFile);
@@ -54,7 +55,7 @@ void createDefaultIcons(
       overwriteExistingIcons(
           template, image, constants.androidFileName, flavor);
       overwriteExistingIcons(
-          template, image, constants.androidFileNameRound, flavor);
+          template, imageRound, constants.androidFileNameRound, flavor);
     }
     overwriteAndroidManifestWithNewLauncherIcon(
         constants.androidDefaultIconName, androidManifestFile);

@@ -38,3 +38,11 @@ Image? decodeImageFile(String filePath) {
   }
   return image;
 }
+
+Image? ovalImageFile(Image? image) {
+  if (image == null) {
+    throw const NoDecoderForImageFormatException();
+  }
+
+  return copyCropCircle(image);
+}
