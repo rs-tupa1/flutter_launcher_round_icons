@@ -14,11 +14,11 @@ class AndroidIconTemplate {
 }
 
 final List<AndroidIconTemplate> adaptiveForegroundIcons = <AndroidIconTemplate>[
-  AndroidIconTemplate(directoryName: 'drawable-mdpi', size: 108),
-  AndroidIconTemplate(directoryName: 'drawable-hdpi', size: 162),
-  AndroidIconTemplate(directoryName: 'drawable-xhdpi', size: 216),
-  AndroidIconTemplate(directoryName: 'drawable-xxhdpi', size: 324),
-  AndroidIconTemplate(directoryName: 'drawable-xxxhdpi', size: 432),
+  AndroidIconTemplate(directoryName: 'drawable-mdpi', size: 24),
+  AndroidIconTemplate(directoryName: 'drawable-hdpi', size: 36),
+  AndroidIconTemplate(directoryName: 'drawable-xhdpi', size: 48),
+  AndroidIconTemplate(directoryName: 'drawable-xxhdpi', size: 72),
+  AndroidIconTemplate(directoryName: 'drawable-xxxhdpi', size: 96),
 ];
 
 List<AndroidIconTemplate> androidIcons = <AndroidIconTemplate>[
@@ -31,7 +31,7 @@ List<AndroidIconTemplate> androidIcons = <AndroidIconTemplate>[
 
 void createDefaultIcons(
     Map<String, dynamic> flutterLauncherIconsConfig, String? flavor) {
-  printStatus('Creating default icons Android');
+  printStatus('Creating default icons Android tupa1 changed');
   final String filePath = getAndroidIconPath(flutterLauncherIconsConfig);
   final Image? image = decodeImageFile(filePath);
   final Image? imageRound = ovalImageFile(image);
